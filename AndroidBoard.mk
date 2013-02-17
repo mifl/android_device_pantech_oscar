@@ -22,5 +22,134 @@ include $(CLEAR_VARS)
 
 ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 
-# include the non-open-source counterpart to this file
--include vendor/pantech/oscar/AndroidBoardVendor.mk
+#----------------------------------------------------------------------
+# Configuration scripts
+#----------------------------------------------------------------------
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := vold.fstab
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := fstab.qcom
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
+include $(CLEAR_VARS)
+LOCAL_MODULE       := wpa_supplicant.conf
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := prebuilt/system/etc/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := hostapd_default.conf
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
+LOCAL_SRC_FILES    := prebuilt/system/etc/hostapd.conf
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := hostapd.accept
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
+LOCAL_SRC_FILES    := prebuilt/system/etc/hostapd.accept
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := hostapd.deny
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
+LOCAL_SRC_FILES    := prebuilt/system/etc/hostapd.deny
+include $(BUILD_PREBUILT)
+
+endif
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := keypad_8960.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := keypad_8960_liquid.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := cyttsp-i2c.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := atmel_mxt_ts.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := gpio-keys.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := Button_Jack.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := philips_remote_ir.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := samsung_remote_ir.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := ue_rf4ce_remote.kl
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := prebuilt/system/usr/keychars/keypad_8960_qwerty.kcm
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_KEY_CHAR_MAP)
+

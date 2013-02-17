@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2012 The Android Open-Source Project
+# Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,11 +11,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 #
+# Emulator keyboard configuration file #1.
+#
+#pz1946 merge for HEADSETHOOK
+keyboard.layout = 8660_handset
+keyboard.characterMap = Generic
 
-#----------------------------------------------------------------------
-
-ifneq ($(filter oscar,$(TARGET_DEVICE)),)
-    LOCAL_PATH := $(call my-dir)
-    include $(call all-subdir-makefiles,$(LOCAL_PATH))
-endif

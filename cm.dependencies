@@ -1,0 +1,12 @@
+[
+    {
+        "repository": "android_device_pantech_qcom-common",
+        "target_path": "device/pantech/qcom-common",
+        "branch": "jellybean"
+    },
+    {
+        "repository": "android_kernel_pantech_p8010",
+        "target_path": "kernel/pantech/p8010",
+        "branch": "jellybean"
+    }
+]

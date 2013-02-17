@@ -22,10 +22,138 @@ $(call inherit-product-if-exists, vendor/pantech/oscar/oscar-vendor.mk)
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
 
+#----------------------------------------------------------------------
+
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Prebuilt kernel
-LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+#----------------------------------------------------------------------
+
+LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel/kernel
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
+#----------------------------------------------------------------------
+
+# Audio policy
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf
+
+# Bluetooth configuration files
+PRODUCT_COPY_FILES += \
+    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
+
+# Bluetooth firmware
+
+# IDC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/usr/idc/pantech_earjack.idc:system/usr/idc/pantech_earjack.idc
+
+# Media configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery.fstab:root/recovery.fstab
+
+# Telephony fixes
+FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/ril/
+
+# Thermal configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/etc/thermald.conf:system/etc/thermald.conf
+
+# Ueventd
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:root/ueventd.rc
+
+# Wlan prima module
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/modules/prima/prima_wlan.ko:/system/lib/modules/prima/prima_wlan.ko
+
+#----------------------------------------------------------------------
+
+# Audio Alsa
+PRODUCT_PACKAGES += \
+    libaudioutils
+
+# Battery
+PRODUCT_PACKAGES += \
+    battery_monitor \
+    battery_shutdown
+
+# fstab.qcom
+PRODUCT_PACKAGES += fstab.qcom
+
+# Init oscar
+PRODUCT_PACKAGES += init.oscar.rc
+
+# Keylayouts and Keychars
+PRODUCT_PACKAGES += \
+    atmel_mxt_ts.kl \
+    Button_Jack.kl \
+    cyttsp-i2c.kl \
+    gpio-keys.kl \
+    keypad_8960.kl \
+    keypad_8960_liquid.kl \
+    philips_remote_ir.kl \
+    samsung_remote_ir.kl \
+    ue_rf4ce_remote.kl
+
+# NFC Support
+PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras
+
+# Sensors
+PRODUCT_PACKAGES += sensors.msm8960
+
+#----------------------------------------------------------------------
+
+# We have enough storage space to hold precise GC data
+PRODUCT_TAGS += dalvik.gc.type-precise
+
+# Common build properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    com.qc.hardware=true \
+    debug.composition.type=dyn \
+    debug.egl.hw=1 \
+    debug.enabletr=true \
+    debug.mdpcomp.maxlayer=0 \
+    debug.mdpcomp.logs=0 \
+    debug.sf.hw=1 \
+    dev.pm.dyn_samplingrate=1 \
+    ro.sf.lcd_density=240
+
+# Misc
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.setupwizard.enable_bypass=1 \
+    dalvik.vm.lockprof.threshold=500 \
+    ro.com.google.locationfeatures=1 \
+    dalvik.vm.dexopt-flags=m=y
+
+# Wifi
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0 \
+    wifi.supplicant_scan_interval=15
+
+#----------------------------------------------------------------------
+
+# inherit device/pantech/qcom-common/qcom-common.mk
+$(call inherit-product-if-exists, device/pantech/qcom-common/qcom-common.mk)
+
