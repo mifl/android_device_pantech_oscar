@@ -72,6 +72,18 @@ lib/libcneqmiutils.so
 lib/libcneutils.so
 lib/libxml.so
 
+# dsp
+etc/firmware/dsp1.mbn
+etc/firmware/dsp2.mbn
+etc/firmware/dsp3.mbn
+etc/firmware/dsps.b00
+etc/firmware/dsps.b01
+etc/firmware/dsps.b02
+etc/firmware/dsps.b03
+etc/firmware/dsps.b04
+etc/firmware/dsps.b05
+etc/firmware/dsps.mdt
+
 # EGL
 lib/libC2D2.so
 lib/libgsl.so
@@ -91,7 +103,6 @@ etc/firmware/a225_pfp.fw
 etc/firmware/a225_pm4.fw
 etc/firmware/a300_pfp.fw
 etc/firmware/a300_pm4.fw
-etc/firmware/cyttsp_8960_cdp.hex
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
 etc/firmware/vidc.b00
@@ -116,6 +127,80 @@ lib/libmm-color-convertor.so
 lib/libmmosal.so
 lib/libmmparser.so
 
+# Modem firmware
+etc/firmware/modem.b00
+etc/firmware/modem.b01
+etc/firmware/modem.b02
+etc/firmware/modem.b03
+etc/firmware/modem.b04
+etc/firmware/modem.b06
+etc/firmware/modem.b07
+etc/firmware/modem.b08
+etc/firmware/modem.mdt
+etc/firmware/modem_f1.b00
+etc/firmware/modem_f1.b01
+etc/firmware/modem_f1.b02
+etc/firmware/modem_f1.b03
+etc/firmware/modem_f1.b04
+etc/firmware/modem_f1.b05
+etc/firmware/modem_f1.b06
+etc/firmware/modem_f1.b07
+etc/firmware/modem_f1.b08
+etc/firmware/modem_f1.b09
+etc/firmware/modem_f1.b10
+etc/firmware/modem_f1.b13
+etc/firmware/modem_f1.b14
+etc/firmware/modem_f1.b21
+etc/firmware/modem_f1.b22
+etc/firmware/modem_f1.b23
+etc/firmware/modem_f1.b25
+etc/firmware/modem_f1.b26
+etc/firmware/modem_f1.b29
+etc/firmware/modem_f1.fli
+etc/firmware/modem_f1.mdt
+etc/firmware/modem_f2.b00
+etc/firmware/modem_f2.b01
+etc/firmware/modem_f2.b02
+etc/firmware/modem_f2.b03
+etc/firmware/modem_f2.b04
+etc/firmware/modem_f2.b05
+etc/firmware/modem_f2.b06
+etc/firmware/modem_f2.b07
+etc/firmware/modem_f2.b08
+etc/firmware/modem_f2.b09
+etc/firmware/modem_f2.b10
+etc/firmware/modem_f2.b13
+etc/firmware/modem_f2.b14
+etc/firmware/modem_f2.b21
+etc/firmware/modem_f2.b22
+etc/firmware/modem_f2.b23
+etc/firmware/modem_f2.b25
+etc/firmware/modem_f2.b26
+etc/firmware/modem_f2.b29
+etc/firmware/modem_f2.fli
+etc/firmware/modem_f2.mdt
+etc/firmware/modem_fw.b00
+etc/firmware/modem_fw.b01
+etc/firmware/modem_fw.b02
+etc/firmware/modem_fw.b03
+etc/firmware/modem_fw.b04
+etc/firmware/modem_fw.b05
+etc/firmware/modem_fw.b06
+etc/firmware/modem_fw.b07
+etc/firmware/modem_fw.b08
+etc/firmware/modem_fw.b09
+etc/firmware/modem_fw.b10
+etc/firmware/modem_fw.b13
+etc/firmware/modem_fw.b14
+etc/firmware/modem_fw.b21
+etc/firmware/modem_fw.b22
+etc/firmware/modem_fw.b23
+etc/firmware/modem_fw.b25
+etc/firmware/modem_fw.b26
+etc/firmware/modem_fw.b29
+etc/firmware/modem_fw.fli
+etc/firmware/modem_fw.mdt
+
 # Pantech_server libs
 lib/libiw.so
 lib/libmtc.so
@@ -124,6 +209,15 @@ lib/libpantech_wifi_mac_backup.so
 lib/libpantech_wifi_mac_rw.so
 lib/libwcnftmp.so
 lib/libwcnftmpscan.so
+
+# Q6 firmware
+etc/firmware/q6.b00
+etc/firmware/q6.b01
+etc/firmware/q6.b03
+etc/firmware/q6.b04
+etc/firmware/q6.b05
+etc/firmware/q6.b06
+etc/firmware/q6.mdt
 
 # Qualcomm common libs
 lib/libdiag.so
@@ -153,8 +247,28 @@ lib/hw/sensors.msm8960.so
 lib/libsky_rawdata.so
 lib/libskytestclient.so
 
+# tzapps
+etc/firmware/tzapps.b00
+etc/firmware/tzapps.b01
+etc/firmware/tzapps.b02
+etc/firmware/tzapps.b03
+etc/firmware/tzapps.mdt
+
+# wcd9310
+etc/firmware/wcd9310/wcd9310_anc.bin
+etc/firmware/wcd9310/wcd9310_mbhc.bin
+
+# wcnss
+etc/firmware/wcnss.b00
+etc/firmware/wcnss.b01
+etc/firmware/wcnss.b02
+etc/firmware/wcnss.b04
+etc/firmware/wcnss.mdt
+
 # WLAN
+etc/firmware/wlan/prima/prima.bin
 etc/firmware/wlan/prima/WCNSS_cfg.dat
+etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 etc/firmware/wlan/prima/WCNSS_qcom_cfg_orgi.ini
 etc/firmware/wlan/prima/WCNSS_qcom_cfg_trptis.ini
 etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
