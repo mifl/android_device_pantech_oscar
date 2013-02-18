@@ -50,10 +50,6 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth firmware
 
-# IDC
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/system/usr/idc/pantech_earjack.idc:system/usr/idc/pantech_earjack.idc
-
 # Media configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml \
@@ -102,15 +98,12 @@ PRODUCT_PACKAGES += init.oscar.rc
 
 # Keylayouts and Keychars
 PRODUCT_PACKAGES += \
-    atmel_mxt_ts.kl \
-    Button_Jack.kl \
+    AVRCP.kl \
     cyttsp-i2c.kl \
-    gpio-keys.kl \
     keypad_8960.kl \
-    keypad_8960_liquid.kl \
-    philips_remote_ir.kl \
-    samsung_remote_ir.kl \
-    ue_rf4ce_remote.kl
+    msm8960-snd-card_Button_Jack.kl \
+    qt602240_ts_input.kl \
+    keypad_8960_qwerty.kcm \
 
 # NFC Support
 PRODUCT_PACKAGES += \

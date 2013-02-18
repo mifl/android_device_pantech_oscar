@@ -1,4 +1,4 @@
-# Copyright (c) 2011, The Linux Foundation.
+# Copyright (c) 2011, Code Aurora Forum.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -66,7 +66,7 @@ key 35    H                 WAKE_DROPPED
 key 36    J                 WAKE_DROPPED
 key 37    K                 WAKE_DROPPED
 key 38    L                 WAKE_DROPPED
-key 28    DPAD_CENTER       WAKE_DROPPED
+key 28    ENTER		    WAKE_DROPPED
 key 109   DPAD_DOWN         WAKE_DROPPED
 
 # Row 5
@@ -88,7 +88,7 @@ key 152   ENDCALL           WAKE_DROPPED
 key 42    SHIFT_LEFT        WAKE_DROPPED
 key 464   MENU              WAKE_DROPPED
 key 29    MENU              WAKE_DROPPED
-key 56    MENU              WAKE_DROPPED
+key 56    ALT_LEFT          WAKE_DROPPED
 key 151   MENU              WAKE_DROPPED
 key 57    SPACE             WAKE_DROPPED
 key 111   DEL               WAKE_DROPPED
@@ -112,5 +112,7 @@ key 231   CALL              WAKE_DROPPED
 # R+ Mapping
 key 142   HOME              WAKE_DROPPED
 # Camera Keys
-key 528   FOCUS
-key 766   CAMERA
+key 766   FOCUS
+key 528   CAMERA
+key 14    DEL               WAKE_DROPPED
+key 41	  GRAVE				WAKE_DROPPED
