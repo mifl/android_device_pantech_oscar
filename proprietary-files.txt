@@ -158,6 +158,3 @@ etc/firmware/wlan/prima/WCNSS_cfg.dat
 etc/firmware/wlan/prima/WCNSS_qcom_cfg_orgi.ini
 etc/firmware/wlan/prima/WCNSS_qcom_cfg_trptis.ini
 etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
-etc/firmware/wlan/prima/WCNSS_qcom_cfg_orgi.ini
-etc/firmware/wlan/prima/WCNSS_qcom_cfg_trptis.ini
-etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
