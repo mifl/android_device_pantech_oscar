@@ -16,7 +16,8 @@
 
 #----------------------------------------------------------------------
 
+LOCAL_PATH := $(call my-dir)
+
 ifneq ($(filter oscar,$(TARGET_DEVICE)),)
-    LOCAL_PATH := $(call my-dir)
     include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif

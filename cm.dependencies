@@ -1,12 +1,14 @@
 [
     {
         "repository": "android_device_pantech_qcom-common",
-        "target_path": "device/pantech/qcom-common",
-        "branch": "jellybean"
+        "target_path": "device/pantech/qcom-common"
+    },
+    {
+        "repository": "android_device_pantech_msm8960-common",
+        "target_path": "device/pantech/msm8960-common"
     },
     {
         "repository": "android_kernel_pantech_p8010",
-        "target_path": "kernel/pantech/p8010",
-        "branch": "jellybean"
+        "target_path": "kernel/pantech/p8010"
     }
 ]
