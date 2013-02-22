@@ -30,10 +30,14 @@ TARGET_SPECIFIC_HEADER_PATH := device/pantech/oscar/include
 # Assert
 TARGET_OTA_ASSERT_DEVICE := PantechP8010,oscar
 
+# Audio
+BOARD_USES_FLUENCE_INCALL := true
+BOARD_USES_SEPERATED_AUDIO_INPUT := true
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/pantech/oscar/bluetooth
-BLUETOOTH_HCI_USE_MCT := true
+#BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/pantech/oscar/bluetooth
+#BLUETOOTH_HCI_USE_MCT := true
 
 # Board info
 BOARD_HAS_NO_SELECT_BUTTON := true
