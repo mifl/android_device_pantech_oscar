@@ -49,7 +49,7 @@
             android:storageDescription="@string/storage_sd_card"
             android:primary="false"
             android:removable="true"
-            android:allowMassStorage="true" /> -->
+            android:allowMassStorage="true" />  -->
 
     <!-- external USB OTG drive -->
     <!-- <storage android:mountPoint="/storage/usbdisk"

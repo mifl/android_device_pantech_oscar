@@ -75,4 +75,3 @@ PRODUCT_PACKAGES += \
 
 # inherit pantech/msm8960-common
 $(call inherit-product-if-exists, device/pantech/msm8960-common/msm8960-common.mk)
-
