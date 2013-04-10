@@ -31,6 +31,9 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Radio fixes
+FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/ril/
+
 #----------------------------------------------------------------------
 
 LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel/kernel
@@ -46,12 +49,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-# Radio fixes
-FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/ril/
-
 # Recovery
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery.fstab:root/recovery.fstab
+
+# uevent.rc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/ueventd.oscar.rc:root/ueventd.rc
 
 # Wlan prima module
 PRODUCT_COPY_FILES += \
@@ -67,9 +71,7 @@ PRODUCT_PACKAGES += \
     qt602240_ts_input.kl
 
 # Ramdisk
-PRODUCT_PACKAGES += \
-    init.oscar.rc \
-    ueventd.rc
+PRODUCT_PACKAGES += init.oscar.rc
 
 #----------------------------------------------------------------------
 
