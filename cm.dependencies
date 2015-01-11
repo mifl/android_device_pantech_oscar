@@ -8,8 +8,8 @@
         "target_path": "device/pantech/msm8960-common"
     },
     {
-        "repository": "android_kernel_pantech_p8010",
-        "target_path": "kernel/pantech/p8010"
+        "repository": "android_kernel_pantech_oscar",
+        "target_path": "kernel/pantech/oscar"
     },
     {
         "repository": "android_vendor_pantech_msm8x60-common",

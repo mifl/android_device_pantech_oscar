@@ -75,9 +75,9 @@ BOARD_KERNEL_BASE               := 0x80200000
 BOARD_KERNEL_CMDLINE            := console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.carrier=ATT user_debug=31 loglevel=0
 BOARD_KERNEL_PAGESIZE           := 2048
 BOARD_RAMDISK_OFFSET            := 0x02000000
-TARGET_KERNEL_CONFIG            := cyanogenmod_oscar_defconfig
+TARGET_KERNEL_CONFIG            := oscar_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN  := arm-eabi-4.4.3
-TARGET_KERNEL_SOURCE            := kernel/pantech/p8010
+TARGET_KERNEL_SOURCE            := kernel/pantech/oscar
 TARGET_PREBUILT_KERNEL          := device/pantech/oscar/prebuilt/kernel/kernel
 
 # SD Card info
