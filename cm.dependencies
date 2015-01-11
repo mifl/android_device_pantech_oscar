@@ -1,7 +1,7 @@
 [
     {
-        "repository": "android_device_pantech_qcom-common",
-        "target_path": "device/pantech/qcom-common"
+        "repository": "android_device_pantech_msm8x60-common",
+        "target_path": "device/pantech/msm8x60-common"
     },
     {
         "repository": "android_device_pantech_msm8960-common",
