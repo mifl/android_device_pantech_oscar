@@ -76,7 +76,7 @@ PRODUCT_PACKAGES += init.oscar.rc
 #----------------------------------------------------------------------
 
 # inherit pantech/msm8960-common
-$(call inherit-product-if-exists, device/pantech/msm8960-common/msm8960-common.mk)
+$(call inherit-product-if-exists, device/pantech/msm8960-common/msm8960.mk)
 
 #  Also get non-open-source vendor/pantech/msm8x60-common
 $(call inherit-product-if-exists, vendor/pantech/msm8x60-common/msm8x60-common-vendor.mk)
