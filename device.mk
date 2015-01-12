@@ -73,6 +73,9 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += init.oscar.rc
 
+# Recovery
+PRODUCT_PACKAGES += init.recovery.qcom.rc
+
 #----------------------------------------------------------------------
 
 # inherit pantech/msm8960-common
