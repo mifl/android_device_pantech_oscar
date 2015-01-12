@@ -16,6 +16,8 @@
 
 #----------------------------------------------------------------------
 
+USE_CAMERA_STUB := true
+
 BOARD_VENDOR := pantech
 
 # inherit from the proprietary version
