@@ -75,6 +75,19 @@ PRODUCT_PACKAGES += init.oscar.rc
 # Recovery
 #PRODUCT_PACKAGES += init.recovery.qcom.rc
 
+# Torch
+PRODUCT_PACKAGES += \
+    Apollo \
+    Torch
+
+# Wallpapers
+PRODUCT_PACKAGES += \
+    Galaxy4 \
+    HoloSpiralWallpaper \
+    MagicSmokeWallpapers \
+    NoiseField \
+    PhaseBeam
+
 #----------------------------------------------------------------------
 
 # inherit pantech/msm8960-common
