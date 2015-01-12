@@ -10,6 +10,10 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/pantech/oscar/full_oscar.mk)
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH  := 540
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_oscar
 PRODUCT_DEVICE := oscar
