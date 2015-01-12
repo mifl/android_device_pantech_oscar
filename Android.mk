@@ -18,6 +18,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+ifeq ($(BOARD_VENDOR),pantech)
 ifneq ($(filter oscar,$(TARGET_DEVICE)),)
     include $(call all-subdir-makefiles,$(LOCAL_PATH))
+endif
 endif

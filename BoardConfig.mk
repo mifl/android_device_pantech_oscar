@@ -16,6 +16,8 @@
 
 #----------------------------------------------------------------------
 
+BOARD_VENDOR := pantech
+
 # inherit from the proprietary version
 -include vendor/pantech/oscar/BoardConfigVendor.mk
 
