@@ -2,3 +2,6 @@
 *.bak
 *.zip
 *.tar
+
+# Ignore patches dir
+patches/
