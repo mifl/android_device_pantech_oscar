@@ -8,6 +8,10 @@
         "target_path": "device/pantech/msm8960-common"
     },
     {
+        "repository": "android_device_qcom_common",
+        "target_path": "device/qcom/common"
+    },
+    {
         "repository": "android_kernel_pantech_oscar",
         "target_path": "kernel/pantech/oscar"
     },
