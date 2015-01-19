@@ -43,7 +43,12 @@ PRODUCT_COPY_FILES += \
 
 #----------------------------------------------------------------------
 
-# Bluetooth firmware
+# Audio UCM files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm:system/etc/snd_soc_msm/snd_soc_msm \
+    $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
+    $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
+    $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_Sitar:system/etc/snd_soc_msm/snd_soc_msm_Sitar
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -57,6 +62,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/modules/prima/prima_wlan.ko:/system/lib/modules/prima/prima_wlan.ko
 
 #----------------------------------------------------------------------
+
+# Audio UCM
+PRODUCT_PACKAGES += \
+    snd_soc_msm \
+    snd_soc_msm_2x \
+    snd_soc_msm_2x_Fusion3 \
+    snd_soc_msm_Sitar
 
 # FM Radio
 PRODUCT_PACKAGES += FmRadioReceiver
