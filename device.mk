@@ -28,11 +28,11 @@ PRODUCT_COPY_FILES += device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+# Frameworks base fixes
+#FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/frameworks/
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
-# Radio fixes
-FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/ril/
 
 #----------------------------------------------------------------------
 
