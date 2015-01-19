@@ -52,10 +52,6 @@ PRODUCT_COPY_FILES += \
 # Recovery
 #PRODUCT_COPY_FILES += $(LOCAL_PATH)/recovery.fstab:root/recovery.fstab
 
-# uevent.rc
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/ueventd.oscar.rc:root/ueventd.rc
-
 # Wlan prima module
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/modules/prima/prima_wlan.ko:/system/lib/modules/prima/prima_wlan.ko
@@ -70,7 +66,9 @@ PRODUCT_PACKAGES += \
     qt602240_ts_input.kl
 
 # Ramdisk
-PRODUCT_PACKAGES += init.oscar.rc
+PRODUCT_PACKAGES += \
+    init.pantech.usb.rc \
+    init.pantech.usb.sh
 
 # Recovery
 #PRODUCT_PACKAGES += init.recovery.qcom.rc

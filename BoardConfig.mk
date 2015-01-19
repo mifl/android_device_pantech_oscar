@@ -78,6 +78,9 @@ TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_HAVE_HDMI_OUT := false
 TARGET_QCOM_HDMI_OUT := false
 
+# Init (We need this to allow the custom Pantech init)
+TARGET_PROVIDES_INIT_RC := true
+
 # Kernel
 BOARD_KERNEL_BASE               := 0x80200000
 BOARD_KERNEL_CMDLINE            := console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.carrier=ATT user_debug=31 loglevel=0
