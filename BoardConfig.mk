@@ -116,4 +116,4 @@ BOARD_SUPPRESS_EMMC_WIPE := true
 
 # Wifi (Add building support AR8151 ALX ethernet driver)
 #BOARD_HAS_ATH_ETH_ALX := true
--include device/pantech/oscar/wifi.mk
+-include device/pantech/oscar/wifi/board-wifi.mk
