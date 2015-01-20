@@ -45,7 +45,6 @@ PRODUCT_COPY_FILES += \
 
 # Audio UCM files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm:system/etc/snd_soc_msm/snd_soc_msm \
     $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
     $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
     $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_Sitar:system/etc/snd_soc_msm/snd_soc_msm_Sitar
