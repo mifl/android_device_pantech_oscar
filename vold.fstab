@@ -25,4 +25,7 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-dev_mount sdcard /storage/sdcard0 auto /devices/platform/msm_sdcc.3/mmc_host
+# 120917 LS1-JHM modified for external SD card
+dev_mount sdcard /storage/sdcard1 auto /devices/platform/msm_sdcc.3/mmc_host
+# 120926 LS2 Warfs for otg_storage
+dev_mount sdcard /storage/otg_storage auto /devices/platform/msm_hsusb_host/usb1

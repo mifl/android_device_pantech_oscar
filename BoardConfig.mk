@@ -95,6 +95,7 @@ TARGET_PREBUILT_KERNEL          := device/pantech/oscar/prebuilt/kernel/kernel
 # Recovery
 BOARD_CUSTOM_GRAPHICS := ../../../device/pantech/oscar/recovery/graphics.c
 TARGET_RECOVERY_DEVICE_DIRS += device/oscar/presto
+TARGET_RECOVERY_FSTAB := device/pantech/oscar/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # SD Card info
